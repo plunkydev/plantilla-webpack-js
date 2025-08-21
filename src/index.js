@@ -47,7 +47,8 @@ function initializeApp() {
   info.innerHTML = `
     <strong>✅ Deploy Test Exitoso!</strong><br>
     📅 ${new Date().toLocaleString('es-ES')}<br>
-    🔗 Imagen cargada dinámicamente con Webpack
+    🔗 Imagen SVG cargada dinámicamente con Webpack<br>
+    🚀 <strong>Build actualizado correctamente!</strong>
   `;
   info.style.cssText = `
     text-align: center;
