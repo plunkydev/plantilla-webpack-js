@@ -204,8 +204,16 @@ npm run dev  # → http://localhost:8081
 **Después del primer push:**
 1. Ve a tu repositorio en GitHub
 2. **Settings** → **Pages**
-3. **Source**: Selecciona "**GitHub Actions**"
+3. **Source**: Selecciona "**GitHub Actions**" (⚠️ NO Jekyll, NO Static HTML)
 4. ¡Listo! 🎉
+
+```
+Source: 
+○ Deploy from a branch          ← NO
+● GitHub Actions               ← ✅ SÍ, esto!
+
+[ Save ]
+```
 
 ### 5️⃣ **Deploy automático** 🚀
 
