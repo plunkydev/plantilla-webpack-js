@@ -58,7 +58,7 @@ Aplica Prettier para dar un formato consistente al código.
 ```bash
 npm run deploy
 ```
-
+NOTA: Borrar manualmente la carpeta `dist/` y luego ejecutar `npm run deploy`.
 Publica el contenido de `dist/` en la rama `gh-pages` del repositorio mediante `git subtree`.
 
 ## Estructura de archivos
