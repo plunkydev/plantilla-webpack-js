@@ -91,33 +91,42 @@ Forza el despliegue incluso si hay conflictos en la rama `gh-pages`.
 
 ## GitHub Pages
 
-Esta plantilla está configurada para desplegar automáticamente en GitHub Pages:
+Esta plantilla está configurada para desplegar **automáticamente** en GitHub Pages usando **GitHub Actions**:
 
-1. **Rama `main`**: Contiene el código fuente (sin `dist/`)
-2. **Rama `gh-pages`**: Contiene solo los archivos compilados de `dist/`
+### ✨ **Deploy Automático**:
+- ✅ **Rama `main`**: Solo código fuente (sin `dist/`)
+- ✅ **GitHub Actions**: Build y deploy automático
+- ✅ **Rama `gh-pages`**: Se crea/actualiza automáticamente
 
-### Configuración inicial:
+### 🚀 **Configuración inicial**:
 
-1. Ve a tu repositorio en GitHub
-2. Ve a Settings → Pages
-3. Selecciona "Deploy from a branch"
-4. Elige la rama `gh-pages` y folder `/ (root)`
+1. **Configura GitHub Pages**:
+   - Ve a tu repositorio → Settings → Pages
+   - Selecciona "GitHub Actions" como fuente
 
-### Workflow:
+2. **¡Eso es todo!** El primer push activará el workflow.
+
+### 📋 **Workflow simplificado**:
 
 ```bash
 # Desarrollo
 npm run dev
 
-# Cuando esté listo para desplegar
-npm run deploy
+# Cuando hagas cambios, simplemente:
+git add .
+git commit -m "Mi cambio"
+git push
 ```
 
-El comando `deploy` automáticamente:
-- Hace build del proyecto
-- Toma solo el contenido de `dist/`
-- Lo sube a la rama `gh-pages`
-- GitHub Pages lo sirve automáticamente
+**¡GitHub Actions automáticamente**:
+- 🔨 Hace build del proyecto
+- 📤 Sube solo `dist/` a `gh-pages`
+- 🌐 Actualiza tu sitio web
+
+### 🔄 **Sin comandos de deploy manual**:
+- ❌ No necesitas `npm run deploy`
+- ❌ No necesitas manejar `dist/` manualmente
+- ✅ Solo haz push y GitHub hace el resto
 
 ## Uso como plantilla
 
