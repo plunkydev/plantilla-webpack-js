@@ -1,6 +1,8 @@
 # 🚀 Plantilla Webpack + JavaScript
 
-> Plantilla moderna y lista para usar con Webpack, Babel, ESLint y deploy automático a GitHub Pages
+> 🎯 **PLANTILLA OFICIAL** - No clonar directamente. Usar como template para nuevos proyectos.
+
+**⚠️ Esta es una PLANTILLA base, no un proyecto para contribuir. Usa el botón "Use this template" de GitHub.**
 
 ## ✨ Características
 
@@ -134,45 +136,136 @@ git push
 - ❌ No necesitas manejar `dist/` manualmente
 - ✅ Solo haz push y GitHub hace el resto
 
-## 🚀 Cómo Usar Esta Plantilla
+## 🚀 CREAR NUEVO PROYECTO - Guía Completa
 
-### 1️⃣ **Crear tu proyecto**
+> 🎯 **Usa esto para crear tu proyecto, NO para contribuir a esta plantilla**
+
+### 1️⃣ **Crear repositorio desde plantilla**
+
+**🔥 Opción Recomendada: GitHub Template**
 ```bash
-# Opción A: Fork/clone desde GitHub
-git clone https://github.com/plunkydev/plantilla-webpack-js.git mi-proyecto
-
-# Opción B: Descargar ZIP y extraer
-# Descarga desde: https://github.com/plunkydev/plantilla-webpack-js
+# 1. Ve a: https://github.com/plunkydev/plantilla-webpack-js
+# 2. Haz click en "Use this template" → "Create a new repository"
+# 3. Nombra tu nuevo proyecto (ej: "mi-awesome-project")
+# 4. ¡Listo! GitHub crea el repo con todo configurado
 ```
 
-### 2️⃣ **Inicializar tu proyecto**
+**Opción B: Clone Manual**
+```bash
+git clone https://github.com/plunkydev/plantilla-webpack-js.git mi-proyecto
+cd mi-proyecto
+rm -rf .git  # Eliminar historial de la plantilla
+git init     # Inicializar nuevo repositorio
+```
+
+### 2️⃣ **Personalizar tu proyecto** 🎨
+
 ```bash
 cd mi-proyecto
-
-# Instalar dependencias
 npm install
-
-# Personalizar package.json
-nano package.json  # Cambiar name, description, author, etc.
 ```
 
-### 3️⃣ **Desarrollar tu aplicación**
-```bash
-# Editar archivos en src/:
-# - src/index.js    → Tu lógica JavaScript
-# - src/styles.css  → Tus estilos
-# - src/template.html → Tu HTML base
-
-# Iniciar desarrollo
-npm run dev
+**⚠️ OBLIGATORIO - Editar `package.json`:**
+```json
+{
+    "name": "mi-nuevo-proyecto",                    // ❗ CAMBIAR
+    "description": "Mi proyecto increíble",            // ❗ CAMBIAR  
+    "author": "Tu Nombre",                         // ❗ CAMBIAR
+    "repository": {
+        "url": "git+https://github.com/TU-USUARIO/mi-nuevo-proyecto.git"  // ❗ CAMBIAR
+    },
+    "homepage": "https://github.com/TU-USUARIO/mi-nuevo-proyecto#readme", // ❗ CAMBIAR
+    "bugs": {
+        "url": "https://github.com/TU-USUARIO/mi-nuevo-proyecto/issues"      // ❗ CAMBIAR
+    }
+}
 ```
 
-### 4️⃣ **Deploy automático**
+**🎨 OPCIONAL - Personalizar HTML:**
+```html
+<!-- src/template.html -->
+<title>Mi Proyecto Genial</title>  <!-- Cambiar título -->
+```
+
+### 3️⃣ **Desarrollar tu aplicación** ⚙️
+
 ```bash
-# Solo haz push para deploy automático
+# Iniciar servidor de desarrollo
+npm run dev  # → http://localhost:8081
+```
+
+**Edita estos archivos:**
+- 📝 `src/index.js` → Tu lógica JavaScript
+- 🎨 `src/styles.css` → Tus estilos
+- 📄 `src/template.html` → Tu estructura HTML
+
+### 4️⃣ **Configurar GitHub Pages** 🌐
+
+**Después del primer push:**
+1. Ve a tu repositorio en GitHub
+2. **Settings** → **Pages**
+3. **Source**: Selecciona "**GitHub Actions**"
+4. ¡Listo! 🎉
+
+### 5️⃣ **Deploy automático** 🚀
+
+```bash
+# Hacer cambios y deploy
 git add .
-git commit -m "Mi primera versión"
+git commit -m "Mi primera versión 🎉"
 git push
+
+# 🪄 GitHub Actions automáticamente:
+# ✓ Hace build
+# ✓ Despliega a gh-pages
+# ✓ Tu sitio está en: https://TU-USUARIO.github.io/mi-proyecto/
+```
+
+## ⚠️ **QUÉ NECESITAS CONFIGURAR**
+
+### ✅ **OBLIGATORIO cambiar:**
+- ☑️ `package.json` → name, description, author, URLs del repositorio
+- ☑️ `src/template.html` → title de tu proyecto
+- ☑️ GitHub Pages settings (solo una vez)
+
+### ✅ **OPCIONAL cambiar:**
+- ☐️ `src/index.js` → tu código personalizado
+- ☐️ `src/styles.css` → tus estilos personalizados
+- ☐️ `.github/workflows/deploy.yml` → si quieres personalizar el workflow
+
+### ❌ **NO necesitas tocar:**
+- ✓ Webpack config (ya optimizado)
+- ✓ Babel config (ya funciona)
+- ✓ ESLint/Prettier (ya configurado)
+- ✓ GitHub Actions workflow (ya funciona)
+- ✓ .gitignore (ya tiene lo necesario)
+
+## 🎆 **Ejemplo Completo de Uso**
+
+```bash
+# 1. Crear desde template en GitHub (botón "Use this template")
+
+# 2. Clonar tu nuevo repositorio
+git clone https://github.com/TU-USUARIO/mi-proyecto.git
+cd mi-proyecto
+
+# 3. Instalar y personalizar
+npm install
+# Editar package.json (cambiar name, author, etc.)
+
+# 4. Desarrollar
+npm run dev  # → http://localhost:8081
+# Editar src/index.js, src/styles.css, etc.
+
+# 5. Deploy
+git add .
+git commit -m "Primera versión 🎉"
+git push
+
+# 6. Configurar GitHub Pages (una sola vez)
+# Settings → Pages → Source: "GitHub Actions"
+
+# 🎉 ¡Tu sitio estará en: https://TU-USUARIO.github.io/mi-proyecto/
 ```
 
 ## 📝 **Template Base**
